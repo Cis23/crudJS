@@ -12,11 +12,10 @@ export const LoadHeadersTable = (seletor) => {
 
 export const loadContentTable = () => {
   const funcionarios = getDatasDB();
-
-  console.log(funcionarios)
+  document.querySelector('tbody').innerHTML = ''
   if(funcionarios){
     funcionarios.map( ({nome, genero, dt_nascimento, cargo, empresa}) => {
-      document.querySelector('tbody').innerHTML = `
+      document.querySelector('tbody').innerHTML += `
         <tr>
           <td>${nome}</td>
           <td>${genero}</td>

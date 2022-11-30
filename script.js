@@ -5,8 +5,8 @@ import { getDatasDB, setDataDB } from './localStorage.js';
 const btnSubmit = document.querySelector("#btnSubmit");
 const form = document.querySelector("form")
 
-LoadHeadersTable("thead");
 loadContentTable();
+LoadHeadersTable("thead");
 
 const childs = Array.from(document.querySelector("#mainContent thead").innerHTML)
 document.querySelector("#mainContent").innerHTML = document.querySelector("#mainContent").innerHTML.replace(/,/g,"");
@@ -15,7 +15,6 @@ document.querySelector("#mainContent").innerHTML = document.querySelector("#main
 btnSubmit.addEventListener("click", (e) => {
   e.preventDefault();
   const funcionario = getFuncionario(form)
-  console.log(funcionario)
   setDataDB(funcionario);
 
   loadContentTable();
