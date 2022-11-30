@@ -4,18 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js" defer type="module"></script>
     <title>Document</title>
   </head>
   <body>
     <div id="root">
-      <div id="mainContent"></div>
+      <div id="mainContent">
+        <table>
+          <thead></thead>
+          <tbody></tbody>
+        </table>
+      </div>
       <form>
         <div class="group-form">
           <label for="nomeSobrenome">Nome e Sobrenome</label>
-          <input type="text" name="nomeSobrenome" id="nomeSobrenome">
+          <input type="text" name="nome" id="nome">
         </div>
+        <div class="group-form">
+          <div>Gênero:
+            <div class="generos">
+              <label>
+                Masculino(M) <input type="radio" name="genero" value="M" required>
+              </label>
+              <label>
+                Feminino(F)<input type="radio" name="genero" value="F" required>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="group-form">
+          <label for="dt_nascimento">Data de Nascimento</label>
+          <input type="date" name="dt_nascimento" id="dt_nascimento">
+        </div>
+        <div class="group-form">
+          <label for="cargo">Cargo</label>
+          <input type="text" name="cargo" id="cargo">
+        </div>
+        <div class="group-form">
+          <label for="empresa">Empresa</label>
+          <input type="text" name="empresa" id="empresa">
+        </div>
+
+        <button id="btnSubmit">Enviar</button>
       </form>
     </div>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
