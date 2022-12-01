@@ -1,52 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/index.js" defer></script>
+    <title>CRUD - Cadastro de usuário</title>
   </head>
   <body>
     <div id="root">
-      <div id="mainContent">
+      
+      <div class="container">
         <table>
-          <thead></thead>
-          <tbody></tbody>
+          <thead>
+        
+          </thead>
+          <tbody>
+            
+          </tbody>
         </table>
       </div>
-      <form>
-        <div class="group-form">
-          <label for="nomeSobrenome">Nome e Sobrenome</label>
-          <input type="text" name="nome" id="nome">
-        </div>
-        <div class="group-form">
-          <div>Gênero:
+
+      <div class="modal">
+        <form id="formFuncionario">
+          <div class="groupForm">
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" required>
+          </div>
+
+          <div class="groupForm sexo">
+            <span>Sexo:</span>
             <div class="generos">
               <label>
-                Masculino(M) <input type="radio" name="genero" value="M" required>
+                Masculino(M) <input type="radio" name="sexo" value="M" required>
               </label>
               <label>
-                Feminino(F)<input type="radio" name="genero" value="F" required>
+                Feminino(F)<input type="radio" name="sexo" value="F" required>
               </label>
             </div>
-          </div>
-        </div>
-        <div class="group-form">
-          <label for="dt_nascimento">Data de Nascimento</label>
-          <input type="date" name="dt_nascimento" id="dt_nascimento">
-        </div>
-        <div class="group-form">
-          <label for="cargo">Cargo</label>
-          <input type="text" name="cargo" id="cargo">
-        </div>
-        <div class="group-form">
-          <label for="empresa">Empresa</label>
-          <input type="text" name="empresa" id="empresa">
-        </div>
+          </div> 
 
-        <button id="btnSubmit">Enviar</button>
-      </form>
+          <div class="group-form">
+            <label for="dt_nascimento">Data de Nascimento</label>
+            <input type="date" name="dt_nasc" id="dt_nasc">
+          </div>
+          
+          <div class="groupForm">
+            <label for="salario">Salario</label>
+            <input type="text" name="salario" id="salario" required>
+          </div>
+          <div class="groupForm">
+            <label for="cargo">Cargo</label>
+            <input type="text" name="cargo" id="cargo" required>
+          </div>
+
+
+          <div class="groupForm">
+            <label for="empresa">Empresa</label>
+            <input type="text" name="empresa" id="empresa" required>
+          </div>
+
+          <input type="submit" value="Cadastrar">
+          <button id='editBtn'>Editar</button>
+        </form>
+      </div>
+
     </div>
-    <script src="script.js" type="module"></script>
   </body>
 </html>
